@@ -65,7 +65,7 @@ f <- function(X, Y, group, A, burnin = 2500, niter = 5000) {
   Z[which(A==1),,1] <- 1
   bsigma <- numeric(burnin+niter); bsigma[1] <- runif(1, 0, 1)
   b <- array(NA, dim = c(ncol(X), ncol(Y), burnin+niter))
-  b[,,1] <- solve(t(X) %*% X) %*% t(X) %*% Y #least squares starting point
+  b[,,1] <- pracma::pinv(t(X) %*% X) %*% t(X) %*% Y #least squares starting point
   beta <-  array(NA, dim = c(ncol(X), ncol(Y), burnin+niter))
   beta[,,1] <- Z[,,1] * b[,,1]
   Sigma <- array(NA, dim = c(ncol(Y), ncol(Y), burnin+niter))
