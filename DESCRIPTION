@@ -1,0 +1,20 @@
+Package: MBIVS
+Title: Multivariate Bayesian Indicator Variable Selection using spike-and-slab
+Version: 1.0
+Date: 2023-06-06
+Description: The package implements the MBIVS method
+License: GPL (>= 2)
+Encoding: UTF-8
+Authors@R: c(
+    person("Travis", "Canida", email = "tacanida@umd.edu", role = c("aut", "cre")),
+    person("Tianzhou", "Ma", role = "aut"))
+Author: Travis Canida [aut, cre],
+        Tianzhou Ma [aut].
+Maintainer: Travis Canida <tacanida@gmail.com>
+Depends: R (>= 4.1.2)
+Imports: Rcpp, LaplacesDemon
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+NeedsCompilation: yes
+Packaged: 2023-06-06 3:41:00 UTC; tacanida
+Date/Publication: 2023-06-06 3:41:00 UTC
